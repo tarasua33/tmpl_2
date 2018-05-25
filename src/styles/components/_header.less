@@ -1,0 +1,227 @@
+.headerBlock {
+  font-size: 0;
+  height: 120px;
+  background: @bakgrounGrey;
+  &-content {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    &-container {
+      padding-left: 0;
+      padding-right: 0;
+      height: 100%;
+      &>.row {
+        height: 100%;
+      }
+      &-menu {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        .maxHeightBlock;
+        &>.glyphicon {
+          position: absolute;
+          top: 35px;
+          right: 10px;
+          font-size: 12pt;
+          color: black;
+          display: none;
+          border-radius: 10px;
+          width: 40px;
+          height: 40px;
+          background: white;
+          padding-top: 12px;
+          padding-left: 12px;
+          cursor: pointer;
+          text-align: justify;
+          z-index: 1;
+          transition: all 0.3s;
+          box-shadow: black 0 0 5px;
+          &:hover {
+            color: @colorHover;
+          }
+        }
+        &-list {
+          display: inline-block;
+          width: 100%;
+          vertical-align: middle;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          .multiLineText;
+          text-align: justify;
+          &-item {
+            position: relative;
+            vertical-align: top;
+            display: inline-block;
+            transition: all 0.2s;
+            height: 40px;
+            border-top: solid 5px transparent;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 10pt;
+            letter-spacing: 0;
+            & span {
+              font-size: 7pt;
+              margin-left: 5px;
+            }
+            &:hover {
+              background: white;
+              border-top: solid 5px @colorHover;
+            }
+            &:hover .headerBlock-content-container-menu-list-item-link {
+              text-decoration: none;
+              color: @colorHover;
+            }
+            &:hover .subMenu {
+              display: block;
+            }
+            &-link {
+              display: inline-block;
+              height: 100%;
+              padding-top: 10px;
+              font-size: 12pt;
+              font-family: 'Arial', sans-serif;
+              font-weight: bold;
+              color: black;
+              line-height: 1;
+              text-transform: uppercase;
+              transition: all 0.2s;
+            }
+          }
+        }
+      }
+      &-logo {
+        height: 100%;
+        .maxHeightBlock;
+        &-pic {
+        }
+      }
+    }
+  }
+}
+
+.itemAlign {
+  margin-right: -10px;
+}
+
+/*Styles for Sub-Item-Menu*/
+.subMenu{
+  z-index: 2;
+  display: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: white;
+  padding-left: 5px;
+  list-style: none;
+  border-bottom: solid 5px @colorHover;
+  border-top: solid 5px transparent;
+  transition: all 0.2s;
+  &-item {
+    transition: all 0.2s;
+    height: 40px;
+    border-top: solid 5px transparent;
+    border-bottom: 1px solid #e7e7e7;
+    padding-left: 5px;
+    padding-right: 5px;
+    letter-spacing: 0;
+    &:hover a {
+      text-decoration: none;
+      color: @colorHover;
+    }
+    &-link {
+      display: inline-block;
+      height: 100%;
+      padding-top: 10px;
+      font-size: 11pt;
+      font-family: 'Arial', sans-serif;
+      color: black;
+      line-height: 1;
+      transition: all 0.2s;
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .headerBlock {
+    &-content {
+      width: 750px;
+      &-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        &-menu {
+          &-list {
+            &-item {
+              &-link {
+                font-size: 10pt;
+              }
+              & span {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerBlock {
+    &-content {
+      width: auto;
+      &-container {
+        &-menu {
+          &>.glyphicon {
+            display: inline-block;
+          }
+          &-list {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 10px;
+            width: 150px;
+            padding-right: 5px;
+            background: white;
+            border-bottom: solid 5px @colorHover;
+            border-top-right-radius: 10px;
+            &-item {
+              display: block;
+              height: 35px;
+              border-bottom: 1px solid #e7e7e7;
+              &-link {
+                padding-top: 5px;
+              }
+            }
+          }
+        }
+        &-logo {
+          &-pic {
+            width: 75px;
+          }
+        }
+      }
+    }
+  }
+
+  .subMenu {
+    width: 160px;
+    left: -160px;
+    top: -5px;
+    border-top: solid 5px @colorHover;
+    &-item {
+      height: 35px;
+      &-link {
+        font-size: 9pt;
+      }
+    }
+  }
+
+  .itemAlign {
+    margin: 0;
+  }
+}

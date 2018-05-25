@@ -1,0 +1,29 @@
+/*emulation multi-line text*/
+.multiLineText() {
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: "";
+    font-size: 0;
+  }
+}
+
+/*emulation max-height block for VA middle*/
+.maxHeightBlock() {
+  &:before {
+    height: 100%;
+    content: "";
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+  }
+}
+
+/*Text format*/
+
+.textForm(@fz,@fw,@col:black) {
+  font-size: @fz;
+  color: @col;
+  font-weight: @fw;
+  font-family: Arial, sans-serif;
+}
