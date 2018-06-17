@@ -1,3 +1,4 @@
+/*SCRIPT FOR SECOND SLIDER ON HEADER PAGE*/
 $('.home-content-latestWorks-slider').slick({
     infinite: true,
     speed: 300,
@@ -27,7 +28,16 @@ $('.home-content-latestWorks-slider').slick({
         }
     ]
 });
+$(function () {
+    $(".pushRight").on("click", function () {
+        $(".home .slick-next").click();
+    }) ;
+    $(".pushLeft").on("click", function () {
+        $(".home .slick-prev").click();
+    }) ;
+});
 
+/*SCRIPT FOR HEADER SLIDER*/
 $('.home-homeSlider-container').slick({
     infinite: true,
     dots: true,
@@ -36,13 +46,4 @@ $('.home-homeSlider-container').slick({
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-});
-
-$(function () {
-   $(".pushRight").on("click", function () {
-       $(".home .slick-next").click();
-   }) ;
-    $(".pushLeft").on("click", function () {
-        $(".home .slick-prev").click();
-    }) ;
 });
