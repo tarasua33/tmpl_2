@@ -1,18 +1,19 @@
 <!--@@master = components/master.tmpl.html-->
+
+<!--@@block = content-->
 <div class="contact">
     <div class="contact-container container-fluid">
         <h4 class="contact-container-header">
-            <img src="" class="contact-container-header-pic">
-            contact us
+            <img src="img/iconBlue-contactUs.png" class="contact-container-header-pic">contact us
         </h4>
         <div class="contact-container-data row">
-            <div class="col-md-8">
-                <span class="contact-container-data-text">
+            <div class="col-sm-7">
+                <p class="contact-container-data-text">
                     Thank you for stopping by. Please use the form below to contact us and will get back to you at the earliest possible
-                </span>
-                <span class="contact-container-data-text">
+                </p>
+                <p class="contact-container-data-text">
                     For feedback or questions, please email us at: <a href="#">email@bislite.com</a>
-                </span>
+                </p>
                 <form class="contact-container-data-form" action="">
                     <div class="form-group">
                         <label for="fullName">Name</label>
@@ -28,13 +29,33 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea class="form-control" id="description" rows="3"></textarea>
+                        <textarea class="form-control" id="description" rows="5"></textarea>
                     </div>
+                    <button class="btn btn-default contact-container-data-form-submit" type="submit">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>Submit
+                    </button>
                 </form>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-sm-5">
+                <div class="contact-container-data-map">
+                    <h4 class="contact-container-data-map-title">We are here</h4>
+                    <div class="contact-container-data-map-iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122714.2233714191!2d-97.91862450299577!3d49.18737856914049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea715d29397657%3A0xbb22fccd47dd66ec!2sAlways+Towing!5e0!3m2!1suk!2sua!4v1529327931690" width="290" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <h4 class="footerBlock-content-container-top-col-title">
+                    OFFICE ADDRESS
+                </h4>
+                <p class="footerBlock-content-container-top-col-desc">
+                    <strong>BisLite Inc</strong>
+                    <span>Always Street 265</span>
+                    <span>0X - 125 - Canada</span>
+                    <br>
+                    <span>Phone:987-6543-210</span>
+                    <span>Fax:987-6543-210</span>
+                </p>
+            </div>
         </div>
     </div>
 </div>
-<!--@@block = content-->
 <!--@@close-->
